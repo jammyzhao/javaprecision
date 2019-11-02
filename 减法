@@ -4,8 +4,8 @@ double r = a - b ;
  	return r; 
 	}
 	public static void main (String [] args) { 	
-double a = 2; 	
-double b = 1; 	
+double a = 2; 	//此部分可以修改用户从键盘输入
+double b = 1; 	//同上
 double r = sub(a,b); 	
 System.out.println(r); 
    }
