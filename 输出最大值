@@ -1,0 +1,17 @@
+public class Max{
+	public static int max (int [] a){
+	int []a= {3,5,7};
+	int max = a[0];
+	for (int i = 1;i<a.length;i++){
+		if (a[i] > max ){             //max = args[0] > ars[1];
+	    max = a[i];
+		}
+		return max ;
+	}
+	// else{
+		// max = args[1];
+	// }
+	public  static void  main (String [] args) { 	
+	System.out.println( max(a) );
+		}
+	}
