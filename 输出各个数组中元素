@@ -6,9 +6,9 @@ public class PrintArr{
 
 		public static void printArray(int[] a) {
 			
-             for (int x : a) {
-				 
-            System.out.println(x);
+             for (int x : a) {                      //for (int i = 0;i,arr,length; i++ ){ 
+				                   //System.out.println(arr[i])  }
+            System.out.println(x);                 
            }
         }
 }
