@@ -1,0 +1,20 @@
+public class DiGui {
+	//n > 0
+	public static void printNumber(int n) {
+		if (n < 10) {
+	System.out.printf("%d ", n);
+		} else {
+			//除了最低位之外，进行递归
+		// func( n / 10);                                        //int m = n / 10;
+		printNumber(n / 10);
+			//打印最低位
+		//int o = n % 10;
+	System.out.printf("%d ", n % 10);
+		}
+	}
+	public  static void main(String [] args) {
+		int n = 865 ;
+	     printNumber (n);                                                  //System.out.println(n % 10);
+	}
+
+}
