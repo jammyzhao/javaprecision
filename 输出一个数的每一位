@@ -1,5 +1,5 @@
 public class DiGui {
-	//n > 0
+	
 	public static void printNumber(int n) {
 		if (n < 10) {
 	System.out.printf("%d ", n);
@@ -9,7 +9,7 @@ public class DiGui {
 		printNumber(n / 10);
 			//打印最低位
 		//int o = n % 10;
-	System.out.printf("%d ", n % 10);
+	System.out.printf("%d ", n % 10);                            //System.out.printin(n % 10);
 		}
 	}
 	public  static void main(String [] args) {
