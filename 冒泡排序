@@ -1,0 +1,22 @@
+public class MaoPao {
+	public static void main (String[] args) {
+		int a = { 3,4,8,9,6,4,7};
+		
+		maopao (a);
+		Syetem.out.println(Arrays.toString(a));
+	}
+	public static void swap(int [] a, int i , int j, int t){
+		int t = i;
+		int i = j;
+		int j = t;
+	}
+	public static void  maopao  (int [] a){
+		
+		for(i =0 ;i < a.length - i;i++){//控制趟数
+			for(j = 0;j <  a.length- i-1; j++)//每一趟的排序方式
+				if(a[j] < a[j+1]){
+					swap(a,j,j+1);
+				}
+		}
+	}
+}
