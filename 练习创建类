@@ -1,0 +1,17 @@
+class persion {
+	String name;
+	int age;
+	public void sayHello (String target){
+		System.out.println(
+		    name +"Say hello to " + target
+			);
+	}
+}
+public class Main {
+	public static void main (String []args){
+		Person p = new person();
+         p.name = "小明";
+         p.age	="25" ;
+    p.sayHello("小红");
+	}
+}
