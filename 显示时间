@@ -1,0 +1,85 @@
+import java.util,Scanner;
+public  class MyTime{
+	private int hour;
+	private int minute;
+	private int second;
+	public MyTime (int hour,int minute ,int second ){
+		if (hour < 0 || hour > 23) {
+			return;
+		}
+		
+		if (minute < 0 || minute > 59) {
+			return;
+		}
+		
+		if (second < 0 || second > 59) {
+			return;
+		}
+		
+		this.hour = hour;
+		this.minute = minute;
+		this.second = second;
+	}
+	@Override
+		
+    public String toString(){
+     return String.format("%02d:%02d:%02d",hour,minute,second);
+	    }
+	public void setB24(){
+		b24 = true;
+
+	}
+	
+	//在当前时间上加上多少秒
+	public void add (int seconds){
+		second += seconds;
+	     while  (second >= 60 ){                           
+			minute += 1;
+			second = second - 60;                    
+			 if (minute >= 60 ){
+			hour += 1;
+			minute = minute - 60;
+			
+		         if (hour >= 24 ){
+			        hour -= 24;
+				 }
+			 }
+		 }
+	}
+	public void sub (int seconds){
+		second -= seconds;
+        while (second < 0){
+              minute -= 1;
+              second += 60;
+            if(minute < 0){
+               hour -= 1;
+               mintue += 60;
+                if (hour < 0){
+                 hour =23;
+				}
+			}
+		}
+	}
+	public static void main (0String[] args){
+		Scanner scanner = new Scanner (System.in);
+		System.out.println("请按照24小时输入法输入");
+		System.out.println("请输入小时");
+		int hour = scanner.nextInt();
+		System.out.println("请输入分钟");
+		int mintue = scanner.nextInt();
+		System.out.println("请输入秒数");
+		int second = scanner.nextInt();
+		MyTime t = new MyTime(hour,mintue,second);
+		System.out.println("加 还是 减");
+		select = scanner.nextInt();
+		System.out.println("秒数");
+		int seconds = scanner.nextInt();
+		 if (seclet == 1){
+			 t.add(seconds);
+		 }else{
+			 t.sub(secomds);
+		 }
+		 System.out.println(t);
+	    }
+	}
+}
