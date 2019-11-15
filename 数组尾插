@@ -1,0 +1,25 @@
+import java.util.Arrays;
+public class MyArrayList {
+	private int[] array;
+	private int size;
+	
+	public MyArrayList() {
+		array = new int[10];
+		size = 0;
+	}
+  public void pushBack(int element) {
+		array[size] = element;
+		size++;
+   }
+  @Override
+	public String toString() {
+		return Arrays.toString(Arrays.copyOf(array, size));
+	}
+  public static void main(String[] args) {
+		MyArrayList list = new MyArrayList();
+		list.pushBack(1);
+		list.pushBack(2);
+		list.pushBack(3);
+    System.out.println(list);
+    }
+  }
