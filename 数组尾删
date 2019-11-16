@@ -1,0 +1,31 @@
+import java.util.Arrays;
+public class MyArrayList(){
+ private int[] array;
+ private int size;
+ public MyArrayList(){
+    array = new int [10];
+    size = 0;
+  }
+//尾删
+  public void popback(int element){
+     if (size = 0){
+     System.out.println("为空");
+     return;
+     }
+     array{--size] = 0;
+   }
+   @override
+   public String toString(){
+       return Arrays.toString(Arrays.copyOf(array,size));
+      }
+     public  static void main (String [] args){
+        MyArrayList = new MyArrayList();
+        list.pushBack(5);
+        list.pushBack(6);
+        list.pushBack(8);
+        list.pushBack(7);
+        System.out.println(list);
+        list.popBack();
+        System.ot.println(list);
+        }
+      }
