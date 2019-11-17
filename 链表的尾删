@@ -1,0 +1,26 @@
+public class MyList {
+	private int[] array;
+	private int size;
+	public MyList{
+		array = new int[10];
+		  size = 0;
+	}
+	public void MyList (int element,int index){
+	}
+	public void popBack(int element){     //尾删
+		if (head == null)
+		{
+			throw new RuntimeException("空的");
+		}
+		if(head.next == null){
+			return null ;
+		}else{
+			node cur = head;
+			while (cur.next.next != null){
+				cur = cur.next
+			}
+			return head;
+		}
+	}
+}
+		
