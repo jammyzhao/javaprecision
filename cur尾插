@@ -1,0 +1,30 @@
+public class LianBiao {
+    public static Node mergeTwoList(Node list1,Node list2){
+        if (list1 == null){
+            return list2;
+        }
+        if (list2 == null){
+            return list1;
+        }
+        Node cur1 = list1;
+        Node cur2 = list2;
+        Node nHead = null;
+        Node nLast = null;
+        while (cur1 != null &&cur2 != null){
+            if (cur1.val <= cur2.val){
+                //把cur1尾插到新链表的开始
+                if(nHead == null) {
+                    nHead = cur1;
+                }else{
+                    nLast.next = cur1;
+                }
+                nLast  = cur1;
+                cur1 = cur1.next;
+            }else{
+                nHead = cur2.var;
+
+            }
+        }
+
+    }
+}
