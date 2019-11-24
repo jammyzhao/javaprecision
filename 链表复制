@@ -1,0 +1,19 @@
+import javafx.scene.Node;
+
+public class LianBiaoFuZhi {
+    public static void copy(Node head) {
+        Node nHead = null;
+        Node nLast = null;
+        Node cur = head;
+        while (cur != null) {
+            final Node cur1 = cur;
+            Node node = new Node(cur.val);
+            if (nHead == null) {
+                nHead = node;
+            } else nLast.next = node;
+            nLast = node;
+            cur = cur.next;
+        }
+
+    }
+}
