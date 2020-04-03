@@ -1,0 +1,24 @@
+import java.util.Stack;
+
+public class Solution {
+    Stack<Integer> stack1 = new Stack<Integer>();
+    Stack<Integer> stack2 = new Stack<Integer>();
+    public void push(int node) {
+        stack1.push(node);
+    }
+    public int pop() {
+        //将栈1中的内容存入栈2，可以发现内容顺序反了过来
+        while(!stack1.isEmpty())
+        {
+            stack2.push(stack1.pop());
+        }
+        //从栈2中出来一个
+        int out=stack2.pop();
+        //再存回栈1，恢复原来的状态
+        while(!stack2.isEmpty())
+        {
+            stack1.push(stack2.pop());
+        }
+        return out;
+    }
+}
