@@ -1,13 +1,18 @@
-import java.util.*;
-
 public class 另类加法 {
-        public int addAB(int A, int B) {
-
-            int xor,sum;
+    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int A = scanner.nextInt();
+//        int B = scanner.nextInt();
+        另类加法 add= new 另类加法();
+         int a= add.addAB(1,2);
+        System.out.println(a);
+    }
+    public int addAB(int A ,int B) {
+            int i,sum;
             while(B!=0){
-                xor = A^B;
+                i = A^B;
                 sum = (A&B)<<1;
-                A=xor;
+                A=i;
                 B=sum;
             }
             return A;
