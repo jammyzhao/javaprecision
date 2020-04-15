@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class 另类加法 {
+        public int addAB(int A, int B) {
+
+            int xor,sum;
+            while(B!=0){
+                xor = A^B;
+                sum = (A&B)<<1;
+                A=xor;
+                B=sum;
+            }
+            return A;
+        }
+}
